@@ -1,0 +1,11 @@
+{
+    "id": "user",
+    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQj2579AnKDmLpFYODVwDpXmfIB1nk6EJn6JN19SttfUQF/596OedQLMbbPcYmhONwvv2gOH2TX7K89LFhUExXqLXp2H/OcRg8+hfZiBw4XI5I114i0TeX3g8lEjeksShoNqLSujDv0qQtEu4AsoXCX+DWxaIbnPBMggq+axrK+5LeAmLh4NsSMr0C6BU2UxGNoyCZpAvjPMx1gpYxwQ+uWdYgev1WhAQhFXJa9VGqtxjd5Qj+Rb0TDNdW6wYjPIKCahNwrtwgyFA0S64ObakuvRxupv+BepJuJZ8oMjZ2wUzRE3IqNPyrY7hgoKT2xQgXZNBTyNAP7vJHz8X1k2kD",
+    "groups": [
+        "sysadmin",
+        "dba",
+        "devops"
+    ],
+    "uid": 2001,
+    "shell": "\/bin\/bash"
+}
