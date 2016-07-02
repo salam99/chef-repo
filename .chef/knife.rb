@@ -26,4 +26,4 @@ knife[:region]                = "us-west-2"
 knife[:digital_ocean_access_token] = "30359accc3aa49de781c07365e4d8bd44f29db165fb41c7ccbcf979e8821d45f"
 
 #Uncomment this line after you have created encryption secret
-#knife[:secret_file] = "#{current_dir}/encrypted_data_bag_secret"
+knife[:secret_file] = "#{current_dir}/encrypted_data_bag_secret"

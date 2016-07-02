@@ -1,2 +1,2 @@
 name "dev"
-description "The development environment"q
+description "The development environment"
