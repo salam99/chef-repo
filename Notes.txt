@@ -5,7 +5,6 @@ bundle exec knife node run_list add abracadabra 'role[webserver]'
 
 bundle exec knife node environment set abracadabra prod
 
-
 bundle exec knife digital_ocean droplet create \
     --server-name abracadabra \
     --image ubuntu-14-04-x64 \
@@ -14,6 +13,17 @@ bundle exec knife digital_ocean droplet create \
     --bootstrap \
     --identity-file "~/.ssh/id_rsa" \
     --ssh-keys 2208835
+
+bundle exec knife digital_ocean droplet create \
+    --server-name cloudgenius \
+    --image ubuntu-14-04-x64 \
+    --location nyc2 \
+    --size 512mb \
+    --bootstrap \
+    --identity-file "~/.ssh/id_rsa" \
+    --ssh-keys 2208835 \
+    --environment prod \
+    --run-list 'role[base], role[db_master], role[webserver]'
 
 
 

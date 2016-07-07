@@ -17,13 +17,13 @@ cookbook_license          "apachev2"
 
 # https://console.aws.amazon.com/iam/home?region=us-east-1#security_credential
 
-knife[:aws_access_key_id]     = "AKIAIJDGUBK4LWSOTWQA"
-knife[:aws_secret_access_key] = "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"
+knife[:aws_access_key_id]     = "AKIAIBQHWPR5SDWZR6EQ"
+knife[:aws_secret_access_key] = "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"
 knife[:region]                = "us-west-2"
 
 # https://cloud.digitalocean.com/settings/applications
 
-knife[:digital_ocean_access_token] = "30359accc3aa49de781c07365e4d8bd44f29db165fb41c7ccbcf979e8821d45f"
+knife[:digital_ocean_access_token] = "db9f62fd684d64d5503399ce06c3aee7a2ae544579f8800006ba51fbf1e3c28f"
 
 #Uncomment this line after you have created encryption secret
 knife[:secret_file] = "#{current_dir}/encrypted_data_bag_secret"
