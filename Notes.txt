@@ -2,7 +2,6 @@ bundle exec knife node run_list add abracadabra 'role[base]'
 bundle exec knife node run_list add abracadabra 'role[db_master]'
 bundle exec knife node run_list add abracadabra 'role[webserver]'
 
-
 bundle exec knife node environment set abracadabra prod
 
 bundle exec knife digital_ocean droplet create \
@@ -13,6 +12,15 @@ bundle exec knife digital_ocean droplet create \
     --bootstrap \
     --identity-file "~/.ssh/id_rsa" \
     --ssh-keys 2208835
+
+bundle exec knife ec2 server create \
+  -S id_rsa \
+  -i ~/.ssh/id_rsa \
+  -x ubuntu \
+  -I ami-5189a661 \
+  -f t2.micro \
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 bundle exec knife digital_ocean droplet create \
     --server-name cloudgenius \
@@ -25,11 +33,11 @@ bundle exec knife digital_ocean droplet create \
     --environment prod \
     --run-list 'role[base], role[db_master], role[webserver]'
 
-
-
 bundle exec knife ec2 server create \
   -S id_rsa \
   -i ~/.ssh/id_rsa \
   -x ubuntu \
   -I ami-5189a661 \
-  -f t2.micro
+  -f t2.micro \
+  --environment prod \
+  --run-list 'role[base], role[db_master], role[webserver]'
